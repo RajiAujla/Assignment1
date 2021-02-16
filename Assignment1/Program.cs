@@ -7,8 +7,9 @@ using System.Text.RegularExpressions;
 
 namespace Assignment1
 {
-    class Program
+   class Program
     {
+       
         static void Main(string[] args)
         {
             bool inputValidate = false, menuValidate = false;
@@ -21,17 +22,18 @@ namespace Assignment1
             {
                 Console.Write("Please enter Length of rectangle: ");
                 userLength = Convert.ToInt16(Console.ReadLine());
-
+                
                 Console.Write("Please enter Width of rectangle: ");
                 userWidth = Convert.ToInt16(Console.ReadLine());
 
-                RectangleClass rcObj = new RectangleClass(userLength, userWidth);
-
+               
                 if (userWidth > 0 && userLength > 0)
                 {
                     inputValidate = true;
                     do
                     {
+                        RectangleClass rcObj = new RectangleClass(userLength, userWidth);
+
                         Console.WriteLine(" 1. Get Rectangle Length \n 2. Change Rectangle Length \n 3. Get Rectangle Width \n 4. Change Rectangle Width" +
                                "\n 5. Get Rectangle Perimeter \n 6. Get Rectangle Area \n 7. Exit \n");
                         Console.Write("Please select any option from menu: ");
@@ -67,5 +69,6 @@ namespace Assignment1
                     Console.WriteLine("\nYou did a mistake!! please enter a value");
             } while (inputValidate == false);
         }
+
     }
 }
